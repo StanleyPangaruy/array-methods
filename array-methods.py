@@ -75,37 +75,58 @@ class select:
 ------------------------------------------------""")
         while True:
             try:
-                item = int(input("What do you want to do? (1-10): "))
+                item = int(input("What do you want to do? (1-10)(0=quit): "))
             except ValueError:
                 print("Please choose from option 1-10.")
                 continue
             if item >= 1 and item <= 10:
                 option.chosen(item)
-                break
             else:
-                print("You must choose from number 1-10.")
+                if item == 0:
+                    print("Thanks for trying out my program!")
+                    break
 
 class option:
     def chosen(item):
         if item == 1:
+            print("------------------------------------------------")
             menus.addElement()
+            print("------------------------------------------------")
         elif item == 2:
+            print("------------------------------------------------")
             menus.insElement()
+            print("------------------------------------------------")
         elif item == 3:
+            print("------------------------------------------------")
             menus.modElement()
+            print("------------------------------------------------")
         elif item == 4:
+            print("------------------------------------------------")
             menus.delElement()
+            print("------------------------------------------------")
         elif item == 5:
+            print("------------------------------------------------")
             menus.ascElement()
+            print("------------------------------------------------")
         elif item == 6:
+            print("------------------------------------------------")
             menus.dscElement()
+            print("------------------------------------------------")
         elif item == 7:
+            print("------------------------------------------------")
             menus.lenElement()
-        elif item == 8: 
+            print("------------------------------------------------")
+        elif item == 8:
+            print("------------------------------------------------")
             menus.minElement()
+            print("------------------------------------------------")
         elif item == 9:
+            print("------------------------------------------------")
             menus.maxElement()
+            print("------------------------------------------------")
         elif item == 10:
+            print("------------------------------------------------")
             menus.sumElement()
+            print("------------------------------------------------")
 
 select.userChoice()
