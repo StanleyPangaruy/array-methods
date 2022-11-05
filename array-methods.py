@@ -75,14 +75,14 @@ class select:
 ------------------------------------------------""")
         while True:
             try:
-                item = int(input("What do you want to do? (1-10)(0=quit): "))
+                print("Choose from option 1-10")
+                item = int((input("What do you want to do? (0=quit): ")))
             except ValueError:
-                print("Please choose from option 1-10.")
                 continue
             if item >= 1 and item <= 10:
                 option.chosen(item)
-            else:
-                if item == 0:
+                continue
+            elif item == 0:
                     print("------------------------------------------------")
                     print("Thanks for trying out my program!")
                     print("------------------------------------------------")
