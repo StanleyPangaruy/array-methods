@@ -83,7 +83,9 @@ class select:
                 option.chosen(item)
             else:
                 if item == 0:
+                    print("------------------------------------------------")
                     print("Thanks for trying out my program!")
+                    print("------------------------------------------------")
                     break
 
 class option:
